@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>ใบแจ้งค่าไฟฟ้า</title>
+
+<style>
+body{
+    font-family: Tahoma, Arial, sans-serif;
+    background:#eaeaea;
+}
+.bill{
+    width: 1000px;
+    margin:20px auto;
+    background:#fff;
+    border:1px solid #999;
+    padding:15px;
+    font-size:13px;
+    color:#000;
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+.header-left{
+    display:flex;
+    gap:10px;
+}
+.header-left img{
+    width:70px;
+}
+.header-title{
+    font-size:22px;
+    font-weight:bold;
+}
+.smart{
+    color:#6a1b9a;
+    font-weight:bold;
+}
+.header-right{
+    border:1px solid #999;
+    padding:8px;
+    width:260px;
+    font-size:12px;
+}
+
+/* SECTION */
+.section{
+    margin-top:10px;
+}
+.flex{
+    display:flex;
+    gap:10px;
+}
+.box{
+    border:1px solid #999;
+    padding:8px;
+    flex:1;
+}
+.box-title{
+    background:#eee;
+    padding:4px;
+    font-weight:bold;
+    margin:-8px -8px 6px -8px;
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:12px;
+}
+th,td{
+    border:1px solid #999;
+    padding:4px;
+}
+th{
+    background:#f0f0f0;
+    text-align:center;
+}
+.right{text-align:right;}
+.center{text-align:center;}
+.left{text-align:left;}
+
+/* TOTAL */
+.summary{
+    margin-top:10px;
+    width:100%;
+}
+.grand{
+    border:2px solid #6a1b9a;
+    padding:10px;
+    font-size:18px;
+    font-weight:bold;
+    color:#6a1b9a;
+    text-align:right;
+}
+
+/* NOTICE */
+.notice{
+    color:red;
+    font-size:12px;
+    margin-top:6px;
+}
+
+/* POINT BOX */
+.point{
+    margin-top:15px;
+    border:1px solid #999;
+    padding:10px;
+    background:#faf7e8;
+    font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bill">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="header-left">
+            <img src="logo.png">
+            <div>
+                <div><b>การไฟฟ้านครหลวง</b></div>
+                <div>Metropolitan Electricity Authority</div>
+                <div class="header-title">ใบแจ้งค่าไฟฟ้า</div>
+                <div class="smart">Smart Invoice</div>
+            </div>
+        </div>
+
+        <div class="header-right">
+            เลขที่ใบแจ้งค่าไฟ : 020007328623<br>
+            เลขที่สัญญา : 219010513810<br>
+            จำนวนเงินที่ต้องชำระ : <b>1,401.00</b><br>
+            กรุณาชำระภายใน : <b>06 มิถุนายน 2568</b>
+        </div>
+    </div>
+
+    <!-- CUSTOMER INFO -->
+    <div class="section flex">
+        <div class="box">
+            <div class="box-title">ข้อมูลผู้ใช้ไฟ</div>
+            ชื่อผู้ใช้ไฟ : นายทดสอบ ระบบไฟ<br>
+            ที่อยู่ : 17 ถนนสุขุมวิท กรุงเทพฯ 10110<br>
+            ประเภทผู้ใช้ไฟ : กิจการขนาดเล็ก<br>
+            แรงดันไฟฟ้า : 22 kV
+        </div>
+
+        <div class="box">
+            <div class="box-title">ข้อมูลรอบบิล</div>
+            เลขที่ผู้ใช้ไฟ : 903-403-3570<br>
+            รอบบิล : 15/05/2568 – 05/06/2568<br>
+            หน่วยไฟฟ้า (kWh) : 328.00
+        </div>
+    </div>
+
+    <!-- METER -->
+    <div class="section box">
+        <div class="box-title">ข้อมูลมิเตอร์</div>
+        <table>
+            <tr>
+                <th>เลขมิเตอร์</th>
+                <th>ครั้งก่อน</th>
+                <th>ครั้งหลัง</th>
+                <th>หน่วยที่ใช้</th>
+            </tr>
+            <tr>
+                <td class="center">LHA7028</td>
+                <td class="right">60944.00</td>
+                <td class="right">60616.00</td>
+                <td class="right">328.00</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- CHARGE -->
+    <div class="section box">
+        <div class="box-title">รายการค่าไฟฟ้า</div>
+        <table>
+            <tr>
+                <th class="left">รายการ</th>
+                <th>จำนวนเงิน (บาท)</th>
+            </tr>
+            <tr>
+                <td class="left">ค่าไฟฟ้าฐาน (Based Amount)</td>
+                <td class="right">1,263.36</td>
+            </tr>
+            <tr>
+                <td class="left">ค่าบริการ</td>
+                <td class="right">20.00</td>
+            </tr>
+            <tr>
+                <td class="left">ภาษีมูลค่าเพิ่ม 7%</td>
+                <td class="right">92.96</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- TOTAL -->
+    <div class="summary">
+        <div class="grand">
+            รวมทั้งสิ้น (Grand Total) : 1,401.00 บาท
+        </div>
+        <div class="notice">
+            *** กรุณาชำระเงินภายในกำหนด หากเกินกำหนดจะถูกตัดไฟ ***
+        </div>
+    </div>
+
+    <!-- POINT -->
+    <div class="point">
+        ท่านสามารถสะสมแต้ม MEA Watt-D Point จากการชำระค่าไฟฟ้า  
+        เพื่อแลกรับสิทธิพิเศษและของรางวัลต่าง ๆ
+    </div>
+
+</div>
+
+</body>
+</html>
